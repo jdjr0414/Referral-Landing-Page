@@ -59,6 +59,8 @@ a { color: inherit; text-decoration: none; }
 .hero { padding: var(--hero-padding-y) 0; }
 .hero-main { max-width: 52ch; }
 .hero.compact { padding-top: var(--hero-padding-y); }
+.hero-single .hero-grid { grid-template-columns: 1fr; }
+.hero-single .hero-main { max-width: 100%; }
 .hero-grid {
   display: grid;
   grid-template-columns: 1.25fr 0.75fr;
@@ -135,6 +137,16 @@ h3 { font-size: 1.1rem; }
   margin: 0.5rem 0 0;
   line-height: 1.6;
 }
+.info-content {
+  max-width: 56ch;
+}
+.info-content p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.info-content p:last-child { margin-bottom: 0; }
+.info-content ul { margin: 1rem 0; }
 .card-grid {
   display: grid;
   gap: 1rem;
