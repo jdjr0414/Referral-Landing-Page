@@ -94,6 +94,12 @@ h3 { font-size: 1.1rem; }
 .hero-card {
   padding: 1.5rem;
 }
+.hero-card-intro {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
 .mini-stat {
   padding: 0.95rem 0;
   border-top: 1px solid var(--line);
@@ -104,6 +110,13 @@ h3 { font-size: 1.1rem; }
 .section { padding: 1.5rem 0 4.2rem; }
 .section.alt { background: rgba(255,255,255,0.03); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section-heading { margin-bottom: 1.5rem; }
+.section-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  max-width: 56ch;
+  margin: 0.5rem 0 0;
+  line-height: 1.6;
+}
 .card-grid {
   display: grid;
   gap: 1rem;
@@ -155,6 +168,9 @@ h3 { font-size: 1.1rem; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+.faq-grid-five {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 .cta-band-inner {
   display: grid;
