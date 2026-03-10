@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Refer a Deal | Axiant Partners</title>
+  <meta name="description" content="Submit a referral or declined deal to Axiant Partners through a simple intake form baseline page." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">Axiant Partners</div>
+      <nav>
+        <a href="index.html">Referral Partners</a>
+        <a href="declined-deals.html">Declined Deals</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero compact">
+      <div class="container">
+        <p class="eyebrow">Referral Intake</p>
+        <h1>Refer a Deal</h1>
+        <p class="lead">This is a starter intake page you can wire into your CRM, form provider, or internal deal workflow.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container form-wrap">
+        <form class="referral-form">
+          <div class="form-grid">
+            <label>
+              <span>Your Name</span>
+              <input type="text" placeholder="Jane Smith" />
+            </label>
+            <label>
+              <span>Company</span>
+              <input type="text" placeholder="ABC Equipment" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" placeholder="name@company.com" />
+            </label>
+            <label>
+              <span>Phone</span>
+              <input type="tel" placeholder="(555) 555-5555" />
+            </label>
+            <label>
+              <span>Client Name</span>
+              <input type="text" placeholder="Borrower or business name" />
+            </label>
+            <label>
+              <span>Requested Funding Type</span>
+              <select>
+                <option>Equipment Financing</option>
+                <option>Working Capital</option>
+                <option>Line of Credit</option>
+                <option>SBA</option>
+                <option>Bridge Loan</option>
+                <option>Real Estate</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span>Deal Summary</span>
+            <textarea rows="6" placeholder="Briefly describe the request, timeline, and what makes the file hard to place."></textarea>
+          </label>
+
+          <label>
+            <span>Why are you referring this file?</span>
+            <textarea rows="4" placeholder="Examples: declined elsewhere, outside current lender box, time-sensitive, weaker credit, equipment need."></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Submit Referral</button>
+            <p class="form-note">Starter only. Connect this form to HubSpot, Webflow Forms, Airtable, or your CRM.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>© 2026 Axiant Partners. Baseline starter project.</p>
+      <div class="footer-links">
+        <a href="index.html">Referral Partners</a>
+        <a href="declined-deals.html">Declined Deals</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
