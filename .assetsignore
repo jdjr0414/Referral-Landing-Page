@@ -1,0 +1,3 @@
+# Exclude from Cloudflare Workers asset upload (25 MiB limit per file)
+node_modules
+.git
