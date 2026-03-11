@@ -15,6 +15,7 @@ const priorityMap = {
   'equipment-financing.html': 0.9,
   'send-declined-business-loans.html': 0.9,
   'referral-agreement.html': 0.9,
+  'construction-business-loans.html': 0.9,
   'commercial-lending-iso-program.html': 0.9,
   'blog/index.html': 0.8,
   'glossary.html': 0.8,
@@ -60,7 +61,9 @@ const urls = files
     return a.localeCompare(b);
   })
   .map((f) => {
-    const loc = `${BASE}/${f}`;
+    // Clean URLs (no .html): index.html -> /, blog/index.html -> /blog, page.html -> /page
+    const cleanPath = f === 'index.html' ? '' : f.replace(/\.html$/, '').replace(/\/index$/, '');
+    const loc = cleanPath ? `${BASE}/${cleanPath}` : BASE + '/';
     const priority = getPriority(f);
     const changefreq = getChangefreq(f);
     return `  <url>

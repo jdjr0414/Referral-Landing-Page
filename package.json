@@ -1,0 +1,8 @@
+{
+  "name": "axiant-referral-landing",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/generate-sitemap.js && node scripts/generate-redirects.js",
+    "seo-cleanup": "node scripts/seo-cleanup.js"
+  }
+}
