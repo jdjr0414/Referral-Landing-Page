@@ -1,0 +1,54 @@
+{
+  "baseUrl": "https://axiantpartners.com",
+  "templateStructure": [
+    "Introduction",
+    "Industry-specific financing challenges",
+    "Common financing structures",
+    "Qualification considerations",
+    "Example financing scenarios",
+    "How Axiant Partners may review opportunities",
+    "FAQ",
+    "Call to action"
+  ],
+  "matrix1_industryFinancing": {
+    "description": "Industry × Financing Type",
+    "industries": [
+      {"slug": "trucking", "name": "Trucking", "challenges": ["fuel volatility", "insurance costs", "driver turnover", "industry exposure limits"], "equipment": ["tractors", "trailers", "refrigeration units", "forklifts"]},
+      {"slug": "restaurant", "name": "Restaurant", "challenges": ["high failure rates", "thin margins", "seasonality", "industry exposure limits"], "equipment": ["kitchen equipment", "refrigeration", "point-of-sale", "HVAC"]},
+      {"slug": "construction", "name": "Construction", "challenges": ["project-based revenue", "seasonality", "bonding requirements", "industry exposure"], "equipment": ["excavators", "loaders", "cranes", "trucks"]},
+      {"slug": "manufacturing", "name": "Manufacturing", "challenges": ["capital intensity", "equipment depreciation", "supply chain", "credit cycles"], "equipment": ["CNC machinery", "production lines", "fabrication equipment"]},
+      {"slug": "medical", "name": "Medical", "challenges": ["reimbursement delays", "regulatory compliance", "equipment costs", "practice acquisition"], "equipment": ["diagnostic imaging", "surgical equipment", "dental equipment"]}
+    ],
+    "financingTypes": [
+      {"slug": "equipment-financing", "name": "Equipment Financing", "description": "Asset-backed financing for equipment purchases"},
+      {"slug": "working-capital", "name": "Working Capital", "description": "Cash flow for operations, payroll, inventory"},
+      {"slug": "fleet-financing", "name": "Fleet Financing", "description": "Financing for vehicles and fleet expansion"},
+      {"slug": "revenue-based", "name": "Revenue-Based Financing", "description": "Financing tied to sales or cash flow"}
+    ]
+  },
+  "matrix2_creditScenarios": {
+    "description": "Credit Score Financing Scenarios",
+    "scenarios": [
+      {"slug": "500-credit-score", "minFico": 500, "name": "500 Credit Score Business Loans"},
+      {"slug": "550-credit-score", "minFico": 550, "name": "550 Credit Score Business Loans"},
+      {"slug": "600-credit-score", "minFico": 600, "name": "600 Credit Score Business Loans"},
+      {"slug": "low-credit-business", "minFico": null, "name": "Low Credit Business Loans"}
+    ]
+  },
+  "matrix3_loanDecline": {
+    "description": "Loan Decline Scenarios by Industry",
+    "scenarios": [
+      {"slug": "business-loan-declined", "industry": "general", "name": "Business Loan Declined—Now What?"},
+      {"slug": "restaurant-loan-declined", "industry": "restaurant", "name": "Restaurant Loan Declined—Now What?"},
+      {"slug": "trucking-loan-declined", "industry": "trucking", "name": "Trucking Loan Declined—Now What?"},
+      {"slug": "construction-loan-declined", "industry": "construction", "name": "Construction Loan Declined—Now What?"},
+      {"slug": "equipment-loan-declined", "industry": "general", "name": "Equipment Loan Declined—Now What?"}
+    ]
+  },
+  "internalLinks": {
+    "referral": ["index.html", "referral-agreement.html", "send-declined-business-loans.html", "declined-deals.html"],
+    "credit": ["lenders-for-low-credit-business-loans.html", "what-credit-score-is-needed-for-business-loans.html", "financing-for-businesses-with-low-credit.html"],
+    "decline": ["options-after-business-loan-decline.html", "why-business-loans-get-declined.html", "financing-after-bank-decline.html", "second-look-business-lenders.html"],
+    "industry": ["business-loans-for-trucking-companies.html", "financing-for-restaurants.html", "equipment-financing-for-construction-companies.html"]
+  }
+}
