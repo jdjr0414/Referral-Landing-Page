@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE = 'https://axiantpartners.com';
+const BASE = 'https://commercialfinancereferrals.com';
 const OUTPUT = path.join(__dirname, '..', 'sitemap.xml');
 
 const priorityMap = {

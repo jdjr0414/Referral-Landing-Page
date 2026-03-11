@@ -9,7 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE = 'https://axiantpartners.com';
+const BASE = 'https://commercialfinancereferrals.com';
 const root = path.join(__dirname, '..');
 const files = [];
 
@@ -26,7 +26,7 @@ function walk(dir) {
 }
 walk(root);
 
-const ogImage = '<meta property="og:image" content="https://axiantpartners.com/assets/axiant-logo.png" />';
+const ogImage = '<meta property="og:image" content="https://commercialfinancereferrals.com/assets/axiant-logo.png" />';
 const twitterCard = '<meta name="twitter:card" content="summary" />';
 
 let added = 0;

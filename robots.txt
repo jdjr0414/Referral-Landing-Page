@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap location (update domain if deployed elsewhere)
-Sitemap: https://axiantpartners.com/sitemap.xml
+Sitemap: https://commercialfinancereferrals.com/sitemap.xml

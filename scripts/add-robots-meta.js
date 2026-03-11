@@ -1,12 +1,6 @@
 #!/usr/bin/env node
-/**
- * Adds canonical URL to pages missing it.
- * Run: node scripts/add-canonical.js
- */
 const fs = require('fs');
 const path = require('path');
-
-const BASE = 'https://commercialfinancereferrals.com';
 const root = path.join(__dirname, '..');
 const files = [];
 
@@ -23,20 +17,16 @@ function walk(dir) {
 }
 walk(root);
 
+const meta = '<meta name="robots" content="index, follow" />';
 let added = 0;
 for (const file of files) {
   let content = fs.readFileSync(file, 'utf8');
-  if (content.includes('rel="canonical"')) continue;
-
-  const rel = path.relative(root, file).replace(/\\/g, '/');
-  const url = rel === 'index.html' ? `${BASE}/` : `${BASE}/${rel}`;
-  const canonical = `<link rel="canonical" href="${url}" />`;
-
+  if (content.includes('name="robots"')) continue;
   content = content.replace(
-    /(<link rel="icon"[^>]*\/?>)/i,
-    `$1\n  ${canonical}`
+    /(<meta name="viewport"[^>]*\/?>)/i,
+    `$1\n  ${meta}`
   );
   fs.writeFileSync(file, content, 'utf8');
   added++;
 }
-console.log(`Added canonical to ${added} files.`);
+console.log(`Added meta robots to ${added} files.`);
