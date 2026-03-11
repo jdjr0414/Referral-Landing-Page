@@ -21,20 +21,26 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.insertAdjacentHTML('beforeend', stickyHtml);
 
   const stickyBar = document.getElementById('sticky-cta');
-  let lastScroll = 0;
+  const footer = document.querySelector('.site-footer');
 
   function toggleStickyBar() {
     const scrollY = window.scrollY || window.pageYOffset;
-    if (scrollY > 400) {
+    const footerTop = footer ? footer.getBoundingClientRect().top : Infinity;
+    const footerInView = footerTop < window.innerHeight;
+    const pastHero = scrollY > 400;
+    if (pastHero && !footerInView) {
       stickyBar.classList.add('visible');
       stickyBar.setAttribute('aria-hidden', 'false');
     } else {
       stickyBar.classList.remove('visible');
       stickyBar.setAttribute('aria-hidden', 'true');
     }
-    lastScroll = scrollY;
   }
 
   window.addEventListener('scroll', () => { requestAnimationFrame(toggleStickyBar); }, { passive: true });
+  if (footer) {
+    const obs = new IntersectionObserver(() => requestAnimationFrame(toggleStickyBar), { threshold: 0, rootMargin: '0px' });
+    obs.observe(footer);
+  }
   toggleStickyBar();
 });
