@@ -19,7 +19,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://axiantpartners.com/glossary.html</loc>
+    <lastmod>2025-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://axiantpartners.com/declined-business-loans.html</loc>
+    <lastmod>2025-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://axiantpartners.com/equipment-financing.html</loc>
     <lastmod>2025-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -134,6 +146,7 @@
   <url><loc>https://axiantpartners.com/commercial-finance-advisor-partners.html</loc><lastmod>2025-03-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://axiantpartners.com/commercial-lending-referral-agreement.html</loc><lastmod>2025-03-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://axiantpartners.com/iso-agreement-commercial-lending.html</loc><lastmod>2025-03-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://axiantpartners.com/commercial-lending-iso-agreement.html</loc><lastmod>2025-03-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://axiantpartners.com/how-commercial-lending-referral-fees-work.html</loc><lastmod>2025-03-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://axiantpartners.com/business-loan-referral-commission.html</loc><lastmod>2025-03-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://axiantpartners.com/commercial-finance-referral-fees.html</loc><lastmod>2025-03-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
