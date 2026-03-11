@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "build": "node scripts/generate-sitemap.js && node scripts/generate-redirects.js",
+    "prepare-deploy": "node scripts/prepare-deploy.js",
+    "deploy": "npm run build && npm run prepare-deploy && npx wrangler deploy",
     "seo-cleanup": "node scripts/seo-cleanup.js"
   }
 }

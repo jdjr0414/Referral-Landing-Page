@@ -1,19 +1,19 @@
-# Deployment: Cloudflare Pages
+# Deployment: Cloudflare Workers
 
 This site is **static HTML**—no Astro, no `src/pages`, no framework. All pages are `.html` files in the project root and `blog/`.
 
-## Cloudflare Pages Setup
+## Cloudflare Workers Setup
 
-1. **Build command** (optional): Run generators before deploy
+1. **Deploy command** (required): Use the full deploy script so `dist/` is built without `node_modules`:
    ```bash
-   node scripts/generate-sitemap.js && node scripts/generate-redirects.js
+   npm run deploy
    ```
+   **In Cloudflare:** Set the deploy command to `npm run deploy` (not `npx wrangler deploy`).
 
-2. **Build output directory**: `.` (project root)
-   - Do **not** use `dist`—there is no build step.
-   - All HTML files, `_redirects`, `sitemap.xml`, and `robots.txt` live in the root.
-
-3. **Root directory**: `/` (project root)
+2. **What the deploy script does**:
+   - Runs `generate-sitemap.js` and `generate-redirects.js`
+   - Copies deployable files to `dist/` (excludes `node_modules`, `scripts`, `.git`)
+   - Runs `wrangler deploy` with `assets.directory: "./dist"`
 
 ## URL Routing
 
