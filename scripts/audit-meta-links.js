@@ -32,6 +32,7 @@ const alreadyHasKeywords = new Set();
 const contactLink = /<a\s+href="(https:\/\/axiantpartners\.com\/contact)"(\s|>)/g;
 const mailtoBecome = /<a\s+href="(mailto:jerry@axiantpartners\.com\?subject=Become%20a%20Referral%20Partner)"(\s|>)/g;
 const mailtoDeal = /<a\s+href="(mailto:jerry@axiantpartners\.com\?subject=Referral%20Deal%20Submission)"(\s|>)/g;
+const mailtoSigned = /<a\s+href="(mailto:jerry@axiantpartners\.com\?subject=Signed%20Referral%20Agreement)"(\s|>)/g;
 
 // Derive keywords from title - clean extraction
 function deriveKeywords(title, description) {
@@ -59,6 +60,7 @@ for (const file of files) {
   const beforeMailto = content;
   content = content.replace(mailtoBecome, '<a href="$1" rel="noopener noreferrer"$2');
   content = content.replace(mailtoDeal, '<a href="$1" rel="noopener noreferrer"$2');
+  content = content.replace(mailtoSigned, '<a href="$1" rel="noopener noreferrer"$2');
   if (content !== beforeMailto) { modified = true; relAdded++; }
 
   // 2. Add meta keywords if missing (after meta description)

@@ -17,6 +17,9 @@ const priorityMap = {
   'referral-agreement.html': 0.9,
   'construction-business-loans.html': 0.9,
   'commercial-lending-iso-program.html': 0.9,
+  'average-business-loan-referral-fee.html': 0.85,
+  'referral-partner-earnings.html': 0.85,
+  'making-money-financing-referral-partner.html': 0.85,
   'blog/index.html': 0.8,
   'glossary.html': 0.8,
   'referral-form.html': 0.7,
@@ -55,7 +58,7 @@ function getChangefreq(file) {
 }
 
 const files = walk(path.join(__dirname, '..'));
-const lastmod = '2026-03-10';
+const lastmod = '2026-03-11';
 
 const urls = files
   .sort((a, b) => {
