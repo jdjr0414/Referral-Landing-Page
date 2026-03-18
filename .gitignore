@@ -17,3 +17,6 @@ node_modules/
 
 # Build output
 dist/
+
+# GSC exports + extracted data (not source code)
+gsc/
