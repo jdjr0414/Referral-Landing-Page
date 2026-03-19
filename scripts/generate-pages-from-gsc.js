@@ -106,6 +106,95 @@ function slugify(query) {
 }
 
 function pickTopics(rows, limit = 15) {
+  const stopWords = new Set([
+    'the',
+    'and',
+    'for',
+    'to',
+    'with',
+    'of',
+    'in',
+    'on',
+    'at',
+    'a',
+    'an',
+    'this',
+    'that',
+    'what',
+    'how',
+    'when',
+    'where',
+    'is',
+    'are',
+    'be',
+    'it',
+  ]);
+
+  function stemToken(t) {
+    // Lightweight plural normalization to reduce near-duplicate overlap:
+    // accounts -> account, receivables -> receivable, brokers -> broker, etc.
+    if (t.length > 3 && t.endsWith('s')) return t.slice(0, -1);
+    return t;
+  }
+
+  function tokenize(query) {
+    const cleaned = query.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    const parts = cleaned.split(/\s+/).filter(Boolean);
+    const tokens = parts
+      .map(stemToken)
+      .filter((tok) => tok.length > 2 && !stopWords.has(tok));
+    return new Set(tokens);
+  }
+
+  function jaccard(a, b) {
+    const union = new Set([...a, ...b]);
+    if (!union.size) return 0;
+    let interCount = 0;
+    for (const x of a) if (b.has(x)) interCount++;
+    return interCount / union.size;
+  }
+
+  function isNearDuplicate(candidateQuery, chosenQueries) {
+    const candTokens = tokenize(candidateQuery);
+
+    // Also prevent picking a topic that is too close to something that already exists in the repo.
+    // This avoids overlap with pages created by earlier runs.
+    const existingHtmlSlugs = fs
+      .readdirSync(root)
+      .filter((f) => f.toLowerCase().endsWith('.html'))
+      .map((f) => f.slice(0, -5));
+    const existingTokenSets = existingHtmlSlugs.map((slug) => tokenize(slug.replace(/-/g, ' ')));
+
+    for (const chosenQuery of chosenQueries) {
+      const chosenTokens = tokenize(chosenQuery);
+      const j = jaccard(candTokens, chosenTokens);
+
+      // Consider it a near-duplicate if:
+      // - token similarity is high, OR
+      // - one query is basically the other plus a very small qualifier
+      //   (e.g. "revenue based financing" vs "revenue based financing market").
+      const smaller = candTokens.size < chosenTokens.size ? candTokens : chosenTokens;
+      const larger = candTokens.size < chosenTokens.size ? chosenTokens : candTokens;
+      const smallerIsSubset = smaller.size > 0 && [...smaller].every((t) => larger.has(t));
+      const sizeDiff = Math.abs(candTokens.size - chosenTokens.size);
+
+      if (j >= 0.65) return true;
+      if (smallerIsSubset && sizeDiff <= 2) return true;
+    }
+
+    for (const existingTokens of existingTokenSets) {
+      const j = jaccard(candTokens, existingTokens);
+      const smaller = candTokens.size < existingTokens.size ? candTokens : existingTokens;
+      const larger = candTokens.size < existingTokens.size ? existingTokens : candTokens;
+      const smallerIsSubset = smaller.size > 0 && [...smaller].every((t) => larger.has(t));
+      const sizeDiff = Math.abs(candTokens.size - existingTokens.size);
+
+      if (j >= 0.65) return true;
+      if (smallerIsSubset && sizeDiff <= 2) return true;
+    }
+    return false;
+  }
+
   const candidates = rows
     // Generate enough candidates; later we skip anything that already has a matching HTML file.
     .filter(r => r.impressions >= 3 && r.position >= 1 && r.position <= 100 && !isBrandQuery(r.query))
@@ -117,11 +206,15 @@ function pickTopics(rows, limit = 15) {
 
   const usedSlugs = new Set();
   const topics = [];
+  const chosenQueries = [];
 
   for (const row of candidates) {
     let baseSlug = slugify(row.query);
     if (fs.existsSync(path.join(root, `${baseSlug}.html`))) continue; // avoid near-duplicate cannibalization
     if (usedSlugs.has(baseSlug)) continue;
+
+    if (isNearDuplicate(row.query, chosenQueries)) continue;
+    chosenQueries.push(row.query);
     usedSlugs.add(baseSlug);
 
     const title = row.query[0].toUpperCase() + row.query.slice(1);
