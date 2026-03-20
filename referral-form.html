@@ -16,8 +16,8 @@
   <meta name="robots" content="index, follow" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="canonical" href="https://commercialfinancereferrals.com/referral-form" />
-  <title>Send Signed Agreement | Email Us | Axiant Partners</title>
-  <meta name="description" content="After signing the referral agreement, email it back to us. We review promptly and will confirm once you're set up as a referral partner." />
+  <title>Submit a Deal | Get Started as a Referral Partner | Axiant Partners</title>
+  <meta name="description" content="Brokers, vendors, CPAs and consultants: submit a deal or start a referral partnership. Fill out the form and we'll respond within 1 business day." />
   <meta name="keywords" content="Send, Deal, Email, Axiant Partners" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@
         <a href="/referral-agreement">Referral</a>
         <a href="/blog">Articles</a>
         <a href="https://axiantpartners.com/contact" rel="noopener noreferrer">Contact</a>
-        <a href="/referral-agreement#review" class="btn btn-cta-nav">Send a Deal</a>
+        <a href="/referral-form" class="btn btn-cta-nav">Send a Deal</a>
       </nav>
     </div>
   </header>
@@ -50,13 +50,57 @@
     <section class="hero compact">
       <div class="container">
         <p class="eyebrow">Become a Referral Partner</p>
-        <h1>Send Signed Agreement</h1>
-        <p class="lead">After signing the <a href="/referral-agreement">referral agreement</a>, email it back to us. We review promptly and will confirm once you're set up. Once approved, you can submit deals to the same address.</p>
-        <div class="hero-actions" style="margin-top: 1.5rem;">
-          <a href="mailto:jerry@axiantpartners.com?subject=Signed%20Referral%20Agreement" class="btn btn-primary">Send Signed Agreement</a>
-          <a href="/referral-agreement" class="btn btn-secondary">Review the Referral Agreement</a>
-          <a href="https://axiantpartners.com/contact" rel="noopener noreferrer" class="btn btn-secondary">Contact Us</a>
-        </div>
+        <h1>Submit a Deal or Start a Partnership</h1>
+        <p class="lead">Fill out the form below and we'll reach out within 1 business
+        day. No agreement required to get started.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container" style="max-width: 640px;">
+        <form class="contact-form" action="https://formspree.io/f/xbdzbqjw" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first_name">First Name *</label>
+              <input type="text" id="first_name" name="first_name" required placeholder="First name" />
+            </div>
+            <div class="form-group">
+              <label for="last_name">Last Name *</label>
+              <input type="text" id="last_name" name="last_name" required placeholder="Last name" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="role">Your Role *</label>
+            <select id="role" name="role" required>
+              <option value="" disabled selected>Select your role</option>
+              <option value="Loan Broker">Loan Broker</option>
+              <option value="Equipment Vendor / Dealer">Equipment Vendor / Dealer</option>
+              <option value="CPA / Accountant">CPA / Accountant</option>
+              <option value="Financial Consultant">Financial Consultant</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about the deal</label>
+            <textarea id="message" name="message" rows="5"
+            placeholder="Business type, financing amount needed, why it was declined, etc."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;
+          justify-content:center; font-size:1.05rem; padding: 0.9rem 2rem;">
+            Submit Deal →
+          </button>
+          <p style="text-align:center; margin-top:1rem; font-size:0.85rem;
+          color:var(--muted);">We respond to every submission within 1 business day.</p>
+        </form>
       </div>
     </section>
   </main>
@@ -64,7 +108,7 @@
   <footer class="site-footer">
         <div class="footer-cta">
       <div class="container">
-        <a href="/referral-agreement#review" class="btn btn-primary">Send Signed Agreement</a>
+        <a href="/referral-form" class="btn btn-primary">Send Signed Agreement</a>
         <p>Ready to become a partner? Review the agreement, sign it, and email it back.</p>
       </div>
     </div>

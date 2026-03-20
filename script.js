@@ -3,17 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   forms.forEach((form) => {
     form.addEventListener('submit', (event) => {
+      const action = (form.getAttribute('action') || '').toLowerCase();
+      if (action.includes('formspree.io')) return;
       event.preventDefault();
       alert('Starter form only. Connect this to your CRM or form handler in Cursor.');
     });
   });
 
   // Sticky CTA bar: show when user scrolls past hero
-  const referralPath = window.location.pathname.includes('/blog/') ? '../referral-agreement.html' : 'referral-agreement.html';
+  const referralPath = window.location.pathname.includes('/blog/') ? '../referral-form.html' : 'referral-form.html';
   const stickyHtml = `
     <div class="sticky-cta-bar" id="sticky-cta" aria-hidden="true">
       <div class="container">
-        <a href="${referralPath}#review" class="btn btn-primary">Send a Deal</a>
+        <a href="${referralPath}" class="btn btn-primary">Send a Deal</a>
         <p>Ready to submit? Review the agreement and email us.</p>
       </div>
     </div>
