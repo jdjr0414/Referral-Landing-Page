@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H53CPWQ9TC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H53CPWQ9TC');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="canonical" href="https://commercialfinancereferrals.com/referral-commission-calculator" />
+  <title>Referral Commission Calculator | Estimate Your Commercial Finance Referral Payout | Axiant Partners</title>
+  <meta name="description" content="Estimate your referral commission payout on commercial finance deals. See how much brokers, CPAs, and consultants earn at 35% revenue share on deals from $25K to $500K." />
+  <meta name="keywords" content="referral commission payout, referral commission calculator, how much do referral partners earn, commercial finance referral, 35% revenue share, Axiant Partners" />
+  <meta property="og:title" content="Referral Commission Calculator | Estimate Your Commercial Finance Referral Payout | Axiant Partners" />
+  <meta property="og:description" content="Interactive calculator: estimate referral payout from funded deal size and lender origination points at 35% revenue share." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://commercialfinancereferrals.com/referral-commission-calculator" />
+  <meta property="og:image" content="https://commercialfinancereferrals.com/assets/axiant-logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commercialfinancereferrals.com/"},{"@type":"ListItem","position":2,"name":"Referral Fee Structures","item":"https://commercialfinancereferrals.com/referral-fee-structures-commercial-finance"},{"@type":"ListItem","position":3,"name":"Referral Commission Calculator","item":"https://commercialfinancereferrals.com/referral-commission-calculator"}]}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Referral Commission Calculator | Estimate Your Commercial Finance Referral Payout | Axiant Partners","description":"Estimate your referral commission payout on commercial finance deals. See how much brokers, CPAs, and consultants earn at 35% revenue share on deals from $25K to $500K.","url":"https://commercialfinancereferrals.com/referral-commission-calculator"}
+  </script>
+  <style>
+    .commission-calculator {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 2rem;
+      max-width: 560px;
+      margin: 0 auto;
+      box-shadow: var(--shadow);
+    }
+    .commission-calculator h2 {
+      font-size: 1.25rem;
+      margin: 0 0 1.25rem;
+      color: var(--text);
+      text-align: center;
+    }
+    .commission-calculator .calc-field {
+      margin-bottom: 1.25rem;
+    }
+    .commission-calculator .calc-field label {
+      display: block;
+      font-weight: 600;
+      color: var(--accent-2);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+    .commission-calculator select {
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: var(--panel-2);
+      color: var(--text);
+      padding: 0.95rem 1rem;
+      font: inherit;
+      cursor: pointer;
+    }
+    .commission-calculator select:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .commission-calculator__result-block {
+      margin-top: 1.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+    .commission-calculator__result-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 0 0 0.5rem;
+    }
+    .commission-calculator__amount {
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      font-weight: 800;
+      color: var(--accent);
+      margin: 0 0 1rem;
+      letter-spacing: -0.03em;
+    }
+    .commission-calculator__breakdown {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin: 0 0 1rem;
+      line-height: 1.5;
+    }
+    .commission-calculator__disclaimer {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img src="assets/axiant-logo.png" alt="Axiant Partners logo" />
+        <span class="brand-text">
+          <span class="brand-name">Commercial Finance Referrals</span>
+          <span class="brand-tagline">powered by axiant</span>
+        </span>
+      </a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+      <nav id="primary-nav" class="site-nav">
+        <a href="/">Home</a>
+        <a href="/declined-business-loans">Declined</a>
+        <a href="/equipment-financing">Equipment</a>
+        <a href="/referral-agreement">Referral</a>
+        <a href="/blog">Articles</a>
+        <a href="https://axiantpartners.com/contact" rel="noopener noreferrer">Contact</a>
+        <a href="/referral-form" class="btn btn-cta-nav">Send a Deal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="container">
+        <a href="/">Home</a>
+        <span class="sep">›</span>
+        <a href="/referral-fee-structures-commercial-finance">Referral Fee Structures</a>
+        <span class="sep">›</span>
+        <span aria-current="page">Referral Commission Calculator</span>
+      </div>
+    </nav>
+
+    <section class="hero compact">
+      <div class="container">
+        <p class="eyebrow">Referral Income Estimator</p>
+        <h1>Referral Commission Calculator</h1>
+        <p class="lead">
+          Estimate your <strong>referral commission payout</strong> on commercial finance deals. This <strong>referral commission calculator</strong> uses <strong>35% revenue share</strong>—the rate at Axiant Partners—to show <strong>how much referral partners earn</strong> before taxes and adjustments. Actual payouts vary by deal size, financing type, lender pricing, and agreement terms. Approval and funding are not guaranteed.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Estimate Your Referral Payout</h2>
+          <p class="section-desc">Select a funded loan amount and lender origination points. One point equals 1% of the funded amount toward gross commission in this model.</p>
+        </div>
+        <div class="commission-calculator" id="referral-commission-calculator">
+          <h2>Referral payout calculator</h2>
+          <div class="calc-field">
+            <label for="ref-calc-deal">Deal size (funded amount)</label>
+            <select id="ref-calc-deal" aria-describedby="ref-calc-disclaimer">
+              <option value="25000">$25,000</option>
+              <option value="50000">$50,000</option>
+              <option value="75000">$75,000</option>
+              <option value="100000" selected>$100,000</option>
+              <option value="150000">$150,000</option>
+              <option value="200000">$200,000</option>
+              <option value="300000">$300,000</option>
+              <option value="500000">$500,000</option>
+            </select>
+          </div>
+          <div class="calc-field">
+            <label for="ref-calc-points">Lender origination points</label>
+            <select id="ref-calc-points">
+              <option value="4">4 points (4%)</option>
+              <option value="6">6 points (6%)</option>
+              <option value="8" selected>8 points (8%) — common example</option>
+              <option value="10">10 points (10%)</option>
+              <option value="12">12 points (12%)</option>
+            </select>
+          </div>
+          <div class="commission-calculator__result-block">
+            <p class="commission-calculator__result-label">Estimated referral payout</p>
+            <p class="commission-calculator__amount" id="ref-calc-payout">$2,800</p>
+            <p class="commission-calculator__breakdown" id="ref-calc-breakdown">$100,000 × 8% = $8,000 gross × 35% = $2,800</p>
+            <p class="commission-calculator__disclaimer" id="ref-calc-disclaimer">Estimate only. Actual payouts depend on specific deal terms. Approval and funding not guaranteed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Example Referral Payouts by Deal Size</h2>
+          <p class="section-desc">Illustrative payouts at <strong>8 lender points</strong> and <strong>35% revenue share</strong>—the same assumptions many partners use when asking about <strong>referral commission payout</strong> math.</p>
+        </div>
+        <div class="card-grid three">
+          <article class="card"><h3>$50,000 deal</h3><p>$50,000 × 8% = <strong>$4,000</strong> gross commission × 35% = <strong>$1,400</strong> estimated referral payout.</p></article>
+          <article class="card"><h3>$100,000 deal</h3><p>$100,000 × 8% = <strong>$8,000</strong> gross × 35% = <strong>$2,800</strong> estimated payout.</p></article>
+          <article class="card"><h3>$150,000 deal</h3><p>$150,000 × 8% = <strong>$12,000</strong> gross × 35% = <strong>$4,200</strong> estimated payout.</p></article>
+          <article class="card"><h3>$200,000 deal</h3><p>$200,000 × 8% = <strong>$16,000</strong> gross × 35% = <strong>$5,600</strong> estimated payout.</p></article>
+          <article class="card"><h3>$300,000 deal</h3><p>$300,000 × 8% = <strong>$24,000</strong> gross × 35% = <strong>$8,400</strong> estimated payout.</p></article>
+          <article class="card"><h3>$500,000 deal</h3><p>$500,000 × 8% = <strong>$40,000</strong> gross × 35% = <strong>$14,000</strong> estimated payout.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>How Referral Commissions Are Calculated</h2>
+        </div>
+        <div class="info-content">
+          <p>Most referral partners think in a simple chain: <strong>funded amount</strong> → <strong>lender origination points</strong> → <strong>gross commission</strong> → <strong>your revenue share</strong>. In a points-based model, each point represents one percent of the funded loan amount attributed to gross commission for illustration. So 8 points on a $100,000 transaction implies $8,000 in gross commission <em>before</em> splits, chargebacks, or adjustments. Your <strong>referral commission payout</strong> is then calculated from the financing partner&apos;s share of that economics—at Axiant Partners, referral partners may receive <strong>35% of gross commission</strong> actually received on funded transactions, subject to the referral agreement.</p>
+          <p>In real transactions, lender pricing is not uniform. Equipment deals, working capital lines, SBA-related structures, and real estate-backed credits can carry different origination economics. Some lenders quote in points; others in flat fees or net funding adjustments. That is why a <strong>referral commission calculator</strong> is an estimator, not a quote. Use it to compare scenarios and communicate possibilities to clients—not to guarantee a number on a specific file.</p>
+          <p>For a broader discussion of how fees are structured across commercial finance, read <a href="/referral-fee-structures-commercial-finance">referral fee structures in commercial finance</a>. Pair that with your signed <a href="/referral-agreement">referral agreement</a> so you understand definitions, timing, and what “gross commission” means in your arrangement.</p>
+          <p>If you want a second opinion on economics, compare your calculator results to the walkthrough on <a href="/business-loan-referral-commission">business loan referral commission</a>—it explains how gross commission flows to referral partners in plain language and reinforces why illustrations use round numbers while live deals rarely do.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>When Referral Commissions Are Paid</h2>
+        </div>
+        <div class="info-content">
+          <p>Cash timing matters as much as the headline percentage. Commercial finance referrals typically pay <em>after</em> funding—when the lender or financing partner actually receives its compensation. At Axiant Partners, referral partners are generally paid within <strong>30 days</strong> of our receipt of funds from the funded transaction, per agreement terms. If funding delays, documentation is incomplete, or rescission occurs, payment timelines shift.</p>
+          <p><strong>Clawback</strong> provisions can also affect realized income. If a transaction later defaults, rescinds, or causes commission to be returned, previously paid referral amounts may be subject to recovery. That is standard in commercial referral economics and is one reason partners focus on fit and documentation—not just speed. Read <a href="/when-referral-commissions-are-paid">when referral commissions are paid</a> for timing detail, and see <a href="/blog/understanding-clawbacks-referral-agreements">understanding clawbacks in referral agreements</a> for how clawback language typically works.</p>
+          <p>Understanding payment mechanics helps answer &quot;<strong>how much do referral partners earn</strong>&quot; in practice: earned income is tied to successful funding and stable transactions—not introductions alone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Who Earns Referral Commissions</h2>
+        </div>
+        <ul class="check-list">
+          <li><strong>Loan brokers</strong>—Professionals who source commercial deals and need a home for files outside their lender panel. See <a href="/business-loan-broker-partnership">business loan broker partnership</a>.</li>
+          <li><strong>Equipment vendors</strong>—Dealers and reps who encounter buyers needing financing to complete purchases. See <a href="/can-vendors-get-paid-for-referring-financing">can vendors get paid for referring financing</a>.</li>
+          <li><strong>CPAs and accountants</strong>—Advisors who see tax returns, cash flow stress, and acquisition plans early. See <a href="/cpa-referral-partnership">CPA referral partnership</a>.</li>
+          <li><strong>Business consultants</strong>—Operators helping owners scale, turn around, or prepare for transactions. See <a href="/business-consultant-referral-opportunities">business consultant referral opportunities</a>.</li>
+          <li><strong>Fractional CFOs</strong>—Finance leaders modeling capital needs and timing. See <a href="/fractional-cfo-financing-referrals">fractional CFO financing referrals</a>.</li>
+          <li><strong>Financial advisors</strong>—Professionals coordinating holistic advice when clients need non-dilutive or structured business credit. See <a href="/financial-consultant-referral-program">financial consultant referral program</a>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Factors That Affect Your Referral Payout</h2>
+        </div>
+        <div class="info-content">
+          <p><strong>Deal size</strong> drives the base: larger funded amounts produce larger gross commissions when points are held constant—but not all deals fund at the requested amount. <strong>Lender origination percentage</strong> (points) varies by lender, product, risk, and competition. A &quot;skinny&quot; deal might price at 4–6 points; a more complex file might justify higher pricing—or require fee concessions to win the business.</p>
+          <p><strong>Financing type</strong> changes economics. Equipment loans, merchant-style products, lines of credit, and real estate-backed loans do not all pay the same way. Some compensation is net of fees; some includes trailing or renewal components; some is front-loaded. Your agreement defines what counts toward gross commission for revenue-share purposes.</p>
+          <p><strong>Clawback status</strong> matters after funding. If a deal pays and later reverses, realized referral income can change. <strong>Payment timing</strong> can also shift with lender funding schedules, holiday calendars, or documentation holdbacks. Finally, honesty: <strong>not every referral funds</strong>. The right question is not only &quot;what is the payout if it funds?&quot; but &quot;is this referral a fit for available programs?&quot; That mindset protects clients and protects long-term referral relationships.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="container cta-band-inner">
+        <div>
+          <p class="eyebrow">Referral partners</p>
+          <h2>Ready to Start Earning? Submit Your First Deal</h2>
+          <p>Review the agreement, then introduce your next commercial financing opportunity.</p>
+        </div>
+        <div class="cta-stack">
+          <a href="/referral-form" class="btn btn-primary">Submit a Deal</a>
+          <a href="/referral-agreement" class="btn btn-secondary">Review the Agreement</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+        <div class="footer-cta">
+      <div class="container">
+        <a href="/referral-form" class="btn btn-primary">Send a Deal</a>
+        <p>Ready to submit? Review the agreement and email us.</p>
+      </div>
+    </div>
+    <div class="container footer-row">
+      <div>
+        <p>© 2026 Axiant Partners.</p>
+        <p class="footer-contact">Call <a href="tel:+19199072611">(919) 907-2611</a> or <a href="https://axiantpartners.com/contact" rel="noopener noreferrer">email us</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/referral-fee-structures-commercial-finance">Referral Fee Structures</a>
+        <a href="/when-referral-commissions-are-paid">When Commissions Are Paid</a>
+        <a href="/business-loan-referral-commission">Business Loan Referral Commission</a>
+        <a href="/referral-agreement">Referral Agreement</a>
+        <a href="https://axiantpartners.com/contact" rel="noopener noreferrer">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+(function () {
+  var dealEl = document.getElementById('ref-calc-deal');
+  var pointsEl = document.getElementById('ref-calc-points');
+  var payoutEl = document.getElementById('ref-calc-payout');
+  var breakdownEl = document.getElementById('ref-calc-breakdown');
+  if (!dealEl || !pointsEl || !payoutEl || !breakdownEl) return;
+
+  function fmtMoney(n) {
+    return '$' + Math.round(n).toLocaleString('en-US');
+  }
+
+  function update() {
+    var principal = parseInt(dealEl.value, 10);
+    var pts = parseInt(pointsEl.value, 10);
+    var gross = principal * (pts / 100);
+    var payout = gross * 0.35;
+    payoutEl.textContent = fmtMoney(payout);
+    breakdownEl.textContent =
+      fmtMoney(principal) + ' × ' + pts + '% = ' + fmtMoney(gross) + ' gross × 35% = ' + fmtMoney(payout);
+  }
+
+  dealEl.addEventListener('change', update);
+  pointsEl.addEventListener('change', update);
+  update();
+})();
+  </script>
+</body>
+</html>
