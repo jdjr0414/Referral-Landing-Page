@@ -61,7 +61,13 @@
           <span class="brand-tagline">powered by axiant</span>
         </span>
       </a>
-      <nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" id="nav-backdrop" hidden></div>
+      <nav id="primary-nav" class="site-nav">
         <a href="/">Home</a>
         <a href="/declined-business-loans">Declined</a>
         <a href="/equipment-financing">Equipment</a>

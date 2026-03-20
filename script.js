@@ -1,4 +1,44 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Home page: mobile hamburger menu
+  const navRoot = document.querySelector('.site-header .nav');
+  const toggleBtn = document.querySelector('.nav-toggle');
+  const backdrop = document.getElementById('nav-backdrop');
+  const menu = document.getElementById('primary-nav');
+
+  function closeHomeNav() {
+    if (!navRoot || !toggleBtn) return;
+    navRoot.classList.remove('nav-open');
+    document.body.classList.remove('nav-open');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.setAttribute('aria-label', 'Open menu');
+    if (backdrop) backdrop.hidden = true;
+  }
+
+  function openHomeNav() {
+    if (!navRoot || !toggleBtn) return;
+    navRoot.classList.add('nav-open');
+    document.body.classList.add('nav-open');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    toggleBtn.setAttribute('aria-label', 'Close menu');
+    if (backdrop) backdrop.hidden = false;
+  }
+
+  if (toggleBtn && navRoot && menu) {
+    toggleBtn.addEventListener('click', () => {
+      if (navRoot.classList.contains('nav-open')) closeHomeNav();
+      else openHomeNav();
+    });
+    if (backdrop) {
+      backdrop.addEventListener('click', closeHomeNav);
+    }
+    menu.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('click', closeHomeNav);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeHomeNav();
+    });
+  }
+
   const forms = document.querySelectorAll('form');
 
   forms.forEach((form) => {
