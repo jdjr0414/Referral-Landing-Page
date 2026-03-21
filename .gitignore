@@ -15,8 +15,9 @@ npm-debug.log*
 # Dependencies
 node_modules/
 
-# Build output
-dist/
+# Build output (track dist/_redirects for Cloudflare Pages)
+dist/**
+!dist/_redirects
 
 # GSC exports + extracted data (not source code)
 gsc/
