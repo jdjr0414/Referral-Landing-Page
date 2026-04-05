@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-
-# Sitemap location (update domain if deployed elsewhere)
+Disallow: /referral-form
 Sitemap: https://commercialfinancereferrals.com/sitemap.xml
