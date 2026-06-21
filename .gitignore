@@ -21,3 +21,6 @@ dist/**
 
 # GSC exports + extracted data (not source code)
 gsc/
+
+# Wrangler local cache
+.wrangler/

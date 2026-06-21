@@ -1,0 +1,58 @@
+// Redirect data for the canonicalization Worker (worker/index.js).
+// Source of truth for 301 consolidation. Add entries here as weak pages are pruned.
+// Generated initially from _redirects on 2026-06-20; maintained by hand thereafter.
+
+export const CANONICAL_HOST = "commercialfinancereferrals.com";
+
+// Exact-path 301s: weak/duplicate slug -> canonical page. Keys & values are path-only (no host), no trailing slash.
+export const REDIRECTS = {
+  "/account-receivable-financing-is-based-on": "/accounts-receivable-financing",
+  "/account-receivable-purchase": "/accounts-receivable-financing",
+  "/account-receivables-financing": "/accounts-receivable-financing",
+  "/accounts-receivables-financing": "/accounts-receivable-financing",
+  "/accounts-receivable-funding": "/accounts-receivable-financing",
+  "/accounts-receivable-lending": "/accounts-receivable-financing",
+  "/accounts-receivable-loans": "/accounts-receivable-financing",
+  "/financing-accounts-receivable": "/accounts-receivable-financing",
+  "/accounts-receivable-finance-vs-factoring": "/accounts-receivable-financing",
+  "/accounts-receivable-financing-for-manufacturers": "/accounts-receivable-financing",
+  "/revenue-based-finance": "/what-is-revenue-based-financing",
+  "/revenue-based-funding": "/what-is-revenue-based-financing",
+  "/revenue-based-lending": "/what-is-revenue-based-financing",
+  "/revenue-based-loan": "/what-is-revenue-based-financing",
+  "/working-capital-facility": "/working-capital-financing",
+  "/working-capital-facilities": "/working-capital-financing",
+  "/working-capital-financing-vs-business-line-of-credit": "/working-capital-financing",
+  "/working-capital-financing-for-seasonal-businesses": "/working-capital-financing",
+  "/alternative-financing-for-small-business": "/financing-after-bank-decline",
+  "/business-loans-for-medical-practices": "/financing-after-bank-decline",
+  "/business-loans-for-logistics-companies": "/financing-after-bank-decline",
+  "/loan-referral-program": "/referral-agreement",
+  "/referral-partner-agreement": "/referral-agreement",
+  "/what-credit-score-is-needed-for-business-loans": "/500-credit-score-business-loans",
+  "/cpa-referral-program-advisory-revenue": "/cpa-referral-program",
+  "/certified-public-accountant-referral": "/cpa-referral-program",
+  "/commercial-finance-network-vs-franchise": "/commercial-finance-network-franchise",
+  "/commercial-finance-network-franchise-2": "/commercial-finance-network-franchise",
+  "/iso-broker-second-look-lender-network": "/second-look-lender-network",
+  "/broker-referral-income-mistakes": "/declined-business-loans",
+  "/reasons-declined-buyers-never-call-back": "/declined-business-loans",
+  "/reasons-declined-deals-never-pay-you": "/declined-business-loans",
+  "/reasons-financing-side-income-never-adds-up": "/declined-business-loans",
+  "/why-referral-checks-are-small": "/declined-business-loans",
+  "/why-second-look-lenders-dont-close": "/declined-business-loans",
+  "/war-related-supply-chain-financing": "/financing-after-bank-decline",
+  "/red-sea-shipping-disruption-financing": "/financing-after-bank-decline",
+  "/trucking-financing-fuel-price-spike": "/business-loans-for-trucking-companies",
+  "/working-capital-for-importers": "/working-capital-financing",
+  "/accounts-receivable-financing-delayed-payments": "/accounts-receivable-financing",
+  "/agriculture-financing-input-cost-spikes": "/agricultural-equipment-financing",
+  "/construction-financing-material-cost-volatility": "/construction-business-loans",
+  "/defense-supply-chain-working-capital": "/working-capital-financing",
+  "/vendor-guide-saving-declined-financing-sales": "/can-vendors-get-paid-for-referring-financing",
+  "/cpa-guide-crisis-driven-financing-gaps": "/cpa-referral-program",
+  "/cpas-fractional-cfos-helping-clients-access-financing": "/blog/cpas-fractional-cfos-helping-clients-access-financing",
+  "/equipment-financing-vs-in-house-vendor-programs": "/blog/equipment-financing-vs-in-house-vendor-programs",
+  "/when-lender-hits-exposure-caps": "/blog/when-lender-hits-exposure-caps",
+  "/why-deals-get-declined": "/blog/why-deals-get-declined"
+};
