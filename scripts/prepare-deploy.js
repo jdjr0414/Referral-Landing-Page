@@ -10,7 +10,7 @@ const ROOT = path.join(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 
 const EXCLUDE = new Set([
-  'node_modules', '.git', 'scripts', 'templates', 'dist',
+  'node_modules', '.git', 'scripts', 'templates', 'dist', 'worker',
   '.assetsignore', '.gitignore', 'package.json', 'package-lock.json',
   'DEPLOY-VERIFY.md', 'PRODUCTION-CLEANUP-REPORT.md', 'SEO-CRAWLABILITY-REPORT.md',
   'CRAWLABILITY-VERIFICATION.md', 'CANNIBALIZATION-AUDIT.md', 'DEPLOYMENT.md',
