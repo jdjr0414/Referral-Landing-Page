@@ -507,6 +507,8 @@ h3 { font-size: 1.1rem; }
 .footer-contact { font-size: 0.9rem; margin: 0.5rem 0 0; }
 .footer-contact a { color: var(--accent-2); }
 .footer-contact a:hover { color: var(--accent); }
+.footer-disclaimer { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.footer-disclaimer p { font-size: 0.78rem; line-height: 1.5; color: var(--muted); margin: 0; max-width: 70ch; }
 
 .btn {
   display: inline-flex;
