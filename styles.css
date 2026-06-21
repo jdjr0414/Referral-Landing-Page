@@ -880,3 +880,31 @@ input::placeholder, textarea::placeholder { color: #89a; }
   .form-row { grid-template-columns: 1fr; }
   .contact-form { padding: 1.5rem; }
 }
+
+/* ===== Mobile optimization ===== */
+/* Stop mobile browsers from inflating text + prevent media/long words overflowing the viewport */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { overflow-wrap: break-word; }
+img, svg, video, iframe { max-width: 100%; height: auto; }
+
+@media (max-width: 720px) {
+  /* Data tables (used across 80+ pages, some 4 columns): scroll horizontally
+     instead of pushing the whole page wider than the screen. */
+  .opt-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    font-size: 0.85rem;
+  }
+  .opt-table th, .opt-table td { padding: 0.5rem 0.7rem; }
+
+  /* iOS Safari auto-zooms when focusing a field smaller than 16px — pin to 16px. */
+  input, select, textarea,
+  .form-group input, .form-group select, .form-group textarea { font-size: 16px; }
+
+  /* Comfortable tap targets for wrapped footer links. */
+  .footer-links { gap: 0.5rem 1.1rem; }
+  .footer-links a { padding: 0.3rem 0; display: inline-block; }
+}
