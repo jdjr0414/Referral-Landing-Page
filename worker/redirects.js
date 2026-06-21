@@ -159,6 +159,7 @@ export const REDIRECTS = {
   "/technology-equipment-financing": "/alternative-equipment-financing",
   "/truck-financing-for-businesses": "/alternative-equipment-financing",
   "/trucking-financing-fuel-price-spike": "/business-loans-for-franchises",
+  "/understanding-clawbacks-referral-agreements": "/blog/understanding-clawbacks-referral-agreements",
   "/vendor-financing-partnerships": "/vendor-referral-partner-program",
   "/vendor-financing-referral-program": "/vendor-referral-partner-program",
   "/vendor-guide-saving-declined-financing-sales": "/vendor-referral-partner-program",
