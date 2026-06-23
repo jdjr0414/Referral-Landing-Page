@@ -29,7 +29,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebPage","name":"Inventory Financing for Retail and E-Commerce Businesses","description":"How retail and e-commerce businesses finance inventory purchases — purchase order financing, inventory loans, revenue-based advances, typical advance rates, and qualification criteria.","url":"https://commercialfinancereferrals.com/inventory-financing-for-retail-business","speakable":{"@type":"SpeakableSpecification","cssSelector":[".quick-answer",".key-takeaways"]}}
+  {"@context":"https://schema.org","@type":"WebPage","dateModified":"2026-03-11","name":"Inventory Financing for Retail and E-Commerce Businesses","description":"How retail and e-commerce businesses finance inventory purchases — purchase order financing, inventory loans, revenue-based advances, typical advance rates, and qualification criteria.","url":"https://commercialfinancereferrals.com/inventory-financing-for-retail-business","speakable":{"@type":"SpeakableSpecification","cssSelector":[".quick-answer",".key-takeaways"]}}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://commercialfinancereferrals.com/"},{"@type":"ListItem","position":2,"name":"Inventory Financing for Retail Business"}]}
@@ -416,6 +416,34 @@
       </div>
     </section>
 
+    <section class="section" id="referral-estimator">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Quick estimate</p><h2>What could these referrals be worth?</h2></div>
+        <div class="rce-card">
+          <div class="rce-grid">
+            <label class="rce-field">Funded loan size ($)<input type="text" id="rceLoan" inputmode="decimal" value="250,000" /></label>
+            <label class="rce-field">Referral fee (%)<input type="number" id="rceFee" min="0" max="50" step="0.1" value="1.0" /></label>
+            <label class="rce-field">Funded deals / year<input type="number" id="rceDeals" min="0" step="1" value="12" /></label>
+          </div>
+          <div class="rce-out"><span>Estimated annual referral income</span><strong id="rceTotal">&mdash;</strong></div>
+          <a href="/referral-form" class="btn btn-primary rce-cta">Send a Deal</a>
+          <p class="rce-note">Illustrative only &mdash; not a guarantee of earnings. Want the full breakdown? Use the <a href="/referral-earnings-calculator">referral earnings calculator</a>.</p>
+        </div>
+      </div>
+    </section>
+    <style id="rce-css">
+      #referral-estimator .rce-card{background:var(--surface,#fff);color:var(--surface-text,#0b1626);border-radius:14px;padding:22px;margin-top:18px;box-shadow:0 14px 40px -22px rgba(0,0,0,.5)}
+      #referral-estimator .rce-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+      @media(max-width:640px){#referral-estimator .rce-grid{grid-template-columns:1fr}}
+      #referral-estimator .rce-field{display:block;font-weight:600;font-size:.9rem;color:var(--surface-text,#0b1626)}
+      #referral-estimator .rce-field input{width:100%;min-height:46px;margin-top:6px;padding:10px 12px;border:1.5px solid #d4ddec;border-radius:9px;font-size:1rem;background:#fff;color:#0b1626}
+      #referral-estimator .rce-field input:focus{outline:none;border-color:var(--accent,#2563eb)}
+      #referral-estimator .rce-out{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:18px;padding:14px 18px;background:var(--panel,#0b1626);border-radius:10px;color:var(--text,#e6eef7)}
+      #referral-estimator .rce-out strong{font-size:1.8rem;font-weight:800;color:var(--accent,#2563eb)}
+      #referral-estimator .rce-cta{margin-top:16px;display:inline-block}
+      #referral-estimator .rce-note{font-size:.8rem;color:var(--surface-muted,#5b6b7f);margin-top:10px}
+    </style>
+    <script>(function(){var $=function(i){return document.getElementById(i)};var n=function(v){return parseFloat(String(v).replace(/[^0-9.\-]/g,''))||0};function c(){var t=n($('rceLoan').value)*(n($('rceFee').value)/100)*n($('rceDeals').value);var el=$('rceTotal');if(el)el.textContent='$'+Math.round(t).toLocaleString('en-US')}['rceLoan','rceFee','rceDeals'].forEach(function(i){var e=$(i);if(e)e.addEventListener('input',c)});c()})();</script>
 <section class="section cta-band">
       <div class="container cta-band-inner">
         <div>
